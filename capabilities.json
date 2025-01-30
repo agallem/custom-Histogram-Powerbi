@@ -1,0 +1,181 @@
+{
+  "supportsHighlight": true,
+  "supportsMultiVisualSelection": true,
+  "suppressDefaultTitle": false,
+  "privileges": [],
+  "tooltips": {
+    "supportedTypes": {
+      "default": true,
+      "canvas": true
+    },
+    "roles": ["tooltips"]
+  },
+  "dataRoles": [
+    {
+      "name": "Values",
+      "kind": "GroupingOrMeasure",
+      "displayName": "Values",
+      "displayNameKey": "Visual_Values"
+    },
+    {
+      "name": "VerticalLines",
+      "kind": "GroupingOrMeasure",
+      "displayName": "Vertical Lines",
+      "displayNameKey": "VerticalLinesKey"
+    }
+  ],
+  "dataViewMappings": [
+    {
+      "conditions": [
+        {
+          "Values": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ],
+      "table": {
+        "rows": {
+          "select": [
+            {
+              "for": {
+                "in": "Values"
+              }
+            },
+            {
+              "for": {
+                "in": "VerticalLines"
+              }
+            }
+          ],
+          "dataReductionAlgorithm": {
+            "window": {
+              "count": 150000
+            }
+          }
+        }
+      }
+    }
+  ],
+  "objects": {
+    "general": {
+      "displayName": "General",
+      "displayNameKey": "formattingGeneral",
+      "properties": {
+        "selection": {
+          "displayName": "Selection",
+          "type": {
+            "text": true
+          }
+        },
+        "fontSize": {
+          "type": {
+            "numeric": true
+          }
+        },
+        "fontColor": {
+          "displayName": "Font Color",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "numberOfDecimalPlaces": {
+          "displayName": "Number of Decimals Places",
+          "type": {
+            "numeric": true
+          }
+        }
+      }
+    },
+    "color": {
+      "properties": {
+        "useColorJson": { "type": { "bool": true } },
+        "colorJson": { "type": { "text": true } }
+      }
+    },
+    "bins": {
+      "displayName": "Bins",
+      "properties": {
+        "useAutoBinning": {
+          "displayName": "Use Auto-Binning",
+          "type": {
+            "bool": true
+          }
+        },
+        "binColor": {
+          "displayName": "Bin Color",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "densityCurveColor": {
+          "displayName": "Density Color",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "showDensityCurve": {
+          "displayName": "Show Density Curve",
+          "type": {
+            "bool": true
+          }
+        },
+        "binCount": {
+          "displayName": "Bin Count",
+          "type": {
+            "numeric": true
+          }
+        },
+        "useBinSize": {
+          "displayName": "Use Bin Size",
+          "type": {
+            "bool": true
+          }
+        },
+        "binSize": {
+          "displayName": "Bin Size",
+          "type": {
+            "numeric": true
+          }
+        }
+      }
+    },
+    "Margin": {
+      "displayName": "Margin",
+      "properties": {
+        "topMargin": {
+          "type": {
+            "numeric": true
+          }
+        },
+        "bottomMargin": {
+          "type": {
+            "numeric": true
+          }
+        },
+        "leftMargin": {
+          "type": {
+            "numeric": true
+          }
+        },
+        "rightMargin": {
+          "type": {
+            "numeric": true
+          }
+        }
+      }
+    }
+  }
+}

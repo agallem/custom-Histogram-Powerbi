@@ -1,0 +1,17 @@
+{
+		"version": "1.0.0.1",
+		"author": {"name":"Alicia","email":"aliciagallemore@gmail.com"},
+		"resources": [
+			{
+				"resourceId": "rId0",
+				"sourceType": 5,
+				"file": "resources/PowerBI_Histogram.pbiviz.json"
+			}
+		],
+		"visual": {"name":"Histogram","displayName":"Histogram","guid":"PowerBI_Histogram","visualClassName":"Visual","version":"1.0.0.1","description":"Histogram and distribution curve for PowerBI","supportUrl":"https://github.com/agallem","gitHubUrl":"https://github.com/agallem"},
+		"metadata": {
+			"pbivizjson": {
+				"resourceId": "rId0"
+			}
+		}
+	}
