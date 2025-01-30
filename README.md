@@ -1,5 +1,7 @@
 # Power BI Histogram Visual
 
+This project is a work in progress. I am currently working on adding more features.
+
 This is a custom Power BI visual for creating interactive histogram charts. Built using **D3.js**, **TypeScript**, and the **Power BI Custom Visual SDK**.
 
 ## Features
